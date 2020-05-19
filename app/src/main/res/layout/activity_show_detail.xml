@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="showDetail"
+            type="com.bs.knows.viewmodel.ShowDetailVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.ShowDetailActivityView">
+
+        <include layout="@layout/nav_bar" />
+
+
+        <LinearLayout
+            android:id="@+id/loadingStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+
+            <ProgressBar
+                android:id="@+id/PB_ProgressBar"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50" />
+
+            <TextView
+                android:id="@+id/PB_ProgressBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center"
+                android:text="加载中..."
+                android:textSize="@dimen/dp_25" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/Ly_progress_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_Progress_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:gravity="center"
+                        android:text="更改当前课题进度"
+                        android:textSize="@dimen/dp_20"
+                        android:visibility="gone" />
+
+                    <Spinner
+                        android:id="@+id/spi_TaskProgress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+                <include
+                    android:id="@+id/t1"
+                    layout="@layout/show_detail" />
+
+                <include
+                    android:id="@+id/t2"
+                    layout="@layout/show_detail" />
+
+                <include
+                    android:id="@+id/t3"
+                    layout="@layout/show_detail" />
+
+                <include
+                    android:id="@+id/t4"
+                    layout="@layout/show_detail" />
+
+                <include
+                    android:id="@+id/t5"
+                    layout="@layout/show_detail" />
+
+                <include
+                    android:id="@+id/t6"
+                    layout="@layout/show_detail" />
+
+                <include
+                    android:id="@+id/t7"
+                    layout="@layout/show_detail" />
+
+                <LinearLayout
+                    android:id="@+id/ScrollShowListTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginSize"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:background="@color/mainColor" />
+
+                    <TextView
+                        android:id="@+id/tv_showChasedStuDetailListTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="选择该课题学生"
+                        android:textColor="@color/dialog_black"
+                        android:textSize="@dimen/dp_15" />
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_showChasedStuList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_18"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_conformTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="选择该课题"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/TaskPlan_Upload_View"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/TaskPlan_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="论文进度"
+                        android:textSize="@dimen/dp_25" />
+
+                    <TextView
+                        android:id="@+id/UploadFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_250"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:background="@color/pressed_while"
+
+                        android:gravity="center"
+                        android:text="点击选择文件"
+                        android:textSize="@dimen/dp_25" />
+
+                    <Button
+                        android:id="@+id/btn_conformUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginLeft="@dimen/dp_50"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_50"
+                        android:text="确认上传"
+                        android:textSize="@dimen/dp_15" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

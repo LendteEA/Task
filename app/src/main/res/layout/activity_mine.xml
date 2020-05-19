@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="userDetail"
+            type="com.bs.knows.viewmodel.UserMineVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.MineActivityView">
+
+        <include layout="@layout/nav_bar" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_book"/>
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/userName"
+            android:textSize="@dimen/titleSize"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/marginSize" />
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemHeight"
+            android:layout_marginTop="@dimen/marginSize"
+            android:text="个人信息"
+            android:textSize="@dimen/infoSize"
+            android:paddingStart="@dimen/marginSize"
+            android:paddingEnd="@dimen/marginSize"
+            android:gravity="center_vertical"
+            android:onClick="@{userDetail.gotoUpdatePassword}"
+            android:background="@drawable/commit_item_select" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemHeight"
+            android:layout_marginTop="@dimen/marginSize"
+            android:text="@string/updatePassword"
+            android:textSize="@dimen/infoSize"
+            android:paddingStart="@dimen/marginSize"
+            android:paddingEnd="@dimen/marginSize"
+            android:gravity="center_vertical"
+            android:onClick="@{userDetail.gotoUpdatePassword}"
+            android:background="@drawable/commit_item_select" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemHeight"
+            android:layout_marginTop="@dimen/marginSize"
+            android:text="关于"
+            android:textSize="@dimen/infoSize"
+            android:paddingStart="@dimen/marginSize"
+            android:paddingEnd="@dimen/marginSize"
+            android:gravity="center_vertical"
+            android:onClick="@{userDetail.gotoAboutView}"
+            android:background="@drawable/commit_item_select" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemHeight"
+            android:layout_marginTop="@dimen/marginSize"
+            android:text="注销账户"
+            android:textSize="@dimen/infoSize"
+            android:paddingStart="@dimen/marginSize"
+            android:paddingEnd="@dimen/marginSize"
+            android:gravity="center_vertical"
+            android:onClick="@{userDetail.gotoUpdatePassword}"
+            android:background="@drawable/commit_item_select" />
+
+        <Button
+            style="@style/commintButton"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/marginSize"
+            android:onClick="@{userDetail.userLogout}"
+            android:text="@string/logout" />
+
+
+    </LinearLayout>
+</layout>

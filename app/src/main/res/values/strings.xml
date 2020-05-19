@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">毕设双选系统</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="Register">注册</string>
+    <string name="snapshot" translatable="false" />
+    <string name="permission_read_sdcard">读取本地储存</string>
+    <string name="hint_register">没有账号？立即注册！</string>
+    <string name="login">登录</string>
+    <string name="userName">用户名：</string>
+    <string name="updatePassword">修改密码</string>
+    <string name="logout">退出登录</string>
+    <string name="gotologin">已有账号？请登录！</string>
+    <string name="Register_now">注册</string>
+    <string name="hint_username">用户名/手机号</string>
+    <string name="file_name">文件名称</string>
+    <string name="file_date">文件日期</string>
+    <string name="title">毕设双选系统</string>
+    <string name="picpath">picPath</string>
+    <string name="TODO">TODO</string>
+    <string name="knows">Knows</string>
+</resources>

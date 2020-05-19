@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="userlogin"
+            type="com.bs.knows.viewmodel.UserLoginVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.LoginActivityView">
+
+        <include layout="@layout/nav_bar" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_30"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_book" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/RG_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/rb_student"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:text="学生登录" />
+
+                <RadioButton
+                    android:id="@+id/rb_teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:text="教师登录" />
+                <RadioButton
+                    android:id="@+id/rb_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="管理员登录" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.bs.knows.views.InputView
+            android:id="@+id/input_phone_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputViewHeight"
+            android:layout_marginTop="@dimen/marginSize"
+            app:input_icon="@drawable/ic_pen"
+            app:input_hint="请输入用户名"
+            />
+
+        <View style="@style/line" />
+
+        <com.bs.knows.views.InputView
+            android:id="@+id/input_password_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputViewHeight"
+            android:layout_marginTop="@dimen/marginSize"
+            app:input_icon="@drawable/ic_password"
+            app:input_hint="请输入密码"
+            app:is_password="true" />
+
+        <View style="@style/line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="@{userlogin.gotoRegister}"
+            android:padding="@dimen/marginSize"
+            android:text="@string/hint_register"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/infoSize" />
+
+        <Button
+            style="@style/commintButton"
+            android:text="@string/login"
+            android:textSize="@dimen/titleSize"
+            android:layout_marginTop="@dimen/marginSize"
+            android:onClick="@{userlogin.LoginCheckUserMessage}" />
+
+    </LinearLayout>
+</layout>

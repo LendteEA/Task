@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+    </data>
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navbarHeight"
+        android:background="@color/mainColor"
+        android:paddingLeft="@dimen/marginSize"
+        android:paddingRight="@dimen/marginSize">
+
+        <ImageView
+            android:id="@+id/iv_back_inf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/todo"
+            android:layout_marginStart="@dimen/dp_20"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title_inf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title"
+            android:textSize="@dimen/navBarTitleSize"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/iv_mine_inf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:contentDescription="@string/todo"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:src="@drawable/ic_textsms_w" />
+    </FrameLayout>
+</layout>

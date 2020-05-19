@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userRegister"
+            type="com.bs.knows.viewmodel.UserRegisterVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.RegisterActivityView">
+
+        <include layout="@layout/nav_bar" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_book" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/RG_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_student_re"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_20"
+                            android:text="学生注册" />
+
+                        <RadioButton
+                            android:id="@+id/rb_teacher_re"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_20"
+                            android:text="教师注册" />
+
+                        <RadioButton
+                            android:id="@+id/rb_admin_re"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="管理员注册" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <com.bs.knows.views.InputView
+                    android:id="@+id/input_ID_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputViewHeight"
+                    android:layout_marginTop="@dimen/marginSize"
+                    app:input_hint="请输入学号/员工号"
+                    app:input_icon="@drawable/ic_pen"
+                    app:is_password="false" />
+
+                <View style="@style/line" />
+
+                <com.bs.knows.views.InputView
+                    android:id="@+id/input_password_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputViewHeight"
+                    app:input_hint="请输入密码"
+                    app:input_icon="@drawable/ic_password"
+                    app:is_password="true" />
+
+                <View style="@style/line" />
+
+                <com.bs.knows.views.InputView
+                    android:id="@+id/input_repassword_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inputViewHeight"
+                    app:input_hint="请确认密码"
+                    app:input_icon="@drawable/ic_password"
+                    app:is_password="true" />
+
+                <View style="@style/line" />
+
+                <LinearLayout
+                    android:id="@+id/notAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.bs.knows.views.InputView
+                        android:id="@+id/input_major_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/inputViewHeight"
+                        app:input_hint="请输入专业"
+                        app:input_icon="@drawable/ic_pen" />
+
+                    <View style="@style/line" />
+
+                    <com.bs.knows.views.InputView
+                        android:id="@+id/input_college_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/inputViewHeight"
+                        app:input_hint="请输入学院"
+                        app:input_icon="@drawable/ic_pen" />
+
+                    <View style="@style/line" />
+
+
+                    <com.bs.knows.views.InputView
+                        android:id="@+id/input_username_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/inputViewHeight"
+                        app:input_hint="请输入姓名"
+                        app:input_icon="@drawable/ic_pen" />
+
+                    <View style="@style/line" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/register_goMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:onClick="@{userRegister.backtoLoginActivity}"
+                    android:padding="@dimen/marginSize"
+                    android:text="@string/gotologin"
+                    android:textColor="@color/mainColor"
+                    android:textSize="@dimen/infoSize" />
+
+                <Button
+                    android:id="@+id/bt_commintButton"
+                    style="@style/commintButton"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:onClick="@{userRegister.CheckUserRegisterMessage}"
+                    android:text="@string/Register_now"
+                    android:textSize="@dimen/titleSize" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

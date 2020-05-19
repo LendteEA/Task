@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">毕设双选系统</string>
+    <string name="Register">Register</string>
+    <string name="permission_read_sdcard">read SDcard</string>
+    <string name="hint_register">No account? Register now!</string>
+    <string name="title">毕设双选系统</string>
+    <string name="picpath">picPath</string>
+    <string name="knows">Knows</string>
+    <string name="login">Login</string>
+    <string name="userName">UserName</string>
+    <string name="updatePassword">Password</string>
+    <string name="logout">Logout</string>
+    <string name="gotologin">Login Now !</string>
+    <string name="Register_now">Regaster</string>
+    <string name="hint_username">UserName/Phone number</string>
+    <string name="file_name">File Name</string>
+    <string name="file_date">File Date</string>
+</resources>
